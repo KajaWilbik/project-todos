@@ -5,8 +5,24 @@ import styled from 'styled-components'
 
 export const GlobalStyle = styled.div`
 
-    /* background-color: aquamarine; */
-    margin: 150px;
+     background-color: #e9edc9; 
+     margin:20px;
+     border-color:blue;
+     border: solid;
+     border-radius: 10px;
+     box-shadow: 7px 11px 15px 5px rgb(117 135 56 / 81%);
+    /* -webkit-box-shadow: 7px 11px 15px 5px rgba(204,213,174,0.81);
+    -moz-box-shadow: 7px 11px 15px 5px rgba(204,213,174,0.81); */
+
+
+     @media screen and (min-width: 480px) {    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 3fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 10px;}
+
+    /* margin: 150px;
     padding: 10px;
     display: flex;
     -webkit-align-items: flex-start;
@@ -17,7 +33,7 @@ export const GlobalStyle = styled.div`
     -ms-flex-direction: column;
     flex-direction: column;
     border: 3px solid #e5bb3d;
-    width: fit-content;
+    width: fit-content; */
 
 
 `
