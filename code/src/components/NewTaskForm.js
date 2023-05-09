@@ -31,7 +31,7 @@ export const NewTaskForm = () => {
   return (
     <formStyle>
       <Input type="text" value={newTaskItem} placeholder="write here your task" onChange={(e) => setNewTaskItem(e.target.value)} />
-      <Button type="button" className="button" onClick={newTask}>Add task</Button>
+      <Button type="button" className="button" onClick={newTask}>+</Button>
     </formStyle>
   )
 }
