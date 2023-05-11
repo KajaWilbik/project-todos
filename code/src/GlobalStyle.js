@@ -11,16 +11,14 @@ export const GlobalStyle = styled.div`
      border: solid;
      border-radius: 10px;
      box-shadow: 7px 11px 15px 5px rgb(117 135 56 / 81%);
-    /* -webkit-box-shadow: 7px 11px 15px 5px rgba(204,213,174,0.81);
-    -moz-box-shadow: 7px 11px 15px 5px rgba(204,213,174,0.81); */
+        /* -webkit-box-shadow: 7px 11px 15px 5px rgba(204,213,174,0.81);
+        -moz-box-shadow: 7px 11px 15px 5px rgba(204,213,174,0.81); */
 
 
-     @media screen and (min-width: 480px) {    
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 3fr;
-    grid-column-gap: 0px;
-    grid-row-gap: 10px;}
+    @media screen and (min-width: 600px) {    
+    display: flex;
+    flex-direction: column;
+    align-items:center;
 
     /* margin: 150px;
     padding: 10px;

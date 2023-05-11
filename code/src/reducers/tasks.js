@@ -28,23 +28,31 @@ export const tasks = createSlice({
     },
 
     toggleComplete: (state, action) => {
-      state.list.forEach((list) => {
-        if (list.id === action.payload) {
-          list.complete = !list.complete
-        }
-      });
-
-      // TRIED TO USE FINDINDEX, MANAGED TO MAKE IT WORK BUT WAS GETTING A WEIRD ERROR MESSAGE
-
-      // const index = state.list.findIndex(
-      //   (task) => task.id === action.payload.id,
-      //   state.list[index].complete = action.payload.complete;
-      // )
-
-      // console.log('complete', index)
+      const { id, complete } = action.payload;
+      const task = state.list.find((list) => list.id === id);
+      if (task) {
+        task.complete = !complete;
+      }
+      console.log('updatedToggle', task)
     }
 
+    // toggleComplete: (state, action) => {
+    //   state.list.forEach((list) => {
+    //     if (list.id === action.payload) {
+    //       list.complete = !list.complete
+    //     }
+    //   });
+
+    // TRIED TO USE FINDINDEX, MANAGED TO MAKE IT WORK BUT WAS GETTING A WEIRD ERROR MESSAGE
+
+    // const index = state.list.findIndex(
+    //   (task) => task.id === action.payload.id,
+    //   state.list[index].complete = action.payload.complete;
+    // )
+
+    // console.log('complete', index)
   }
+
 });
 
 export const {

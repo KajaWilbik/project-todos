@@ -29,12 +29,10 @@ export const ToDoList = ({ id, complete }) => {
   };
 
   /*  ---TRIED TO MAKE LENGTH OF COMPLETED TASKS; BUT IT IS NOT SHOWING PROPER DATA,
-    improvment possibility ----
+    improvment possibility ---- */
 
-  const completedTasks = useSyncExternalStore(() => tasksList.filter(
-    (task) => task.complete === true
-  ))
-*/
+  const completedTasksCount = tasksList.filter((task) => task.complete)
+  console.log('Completed tasks', completedTasksCount)
 
   const onDeleteItemButton = (itemIndex) => {
     dispatch(
@@ -58,14 +56,12 @@ export const ToDoList = ({ id, complete }) => {
             <StyledButton type="button" onClick={() => onDeleteItemButton(index)}>🗑️
 
             </StyledButton>
-            {/* <HeaderDate /> */}
-
           </div>
 
         )
       })}
-      {/* <p>Completed tasks {completedTasks.length}</p> */
-      /* improvement possibility, check line 28 */}
+      <p>Completed tasks: {completedTasksCount.length}</p>
+      {/* improvement possibility, check line 28 */}
       <p>Tasks for today: {tasksList.length}</p>
     </StyledToDoList>
 
@@ -94,8 +90,17 @@ h1 {
     margin:15px;
     padding: 10px;
   } 
+
+  @media screen and (min-width: 600px){
+    width:60vw;
+
+
+}
 `
 const Input = styled.input`
 width:20px;
 background-color: #fefae0;
+
+
 `
+
