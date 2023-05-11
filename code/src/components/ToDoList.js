@@ -6,8 +6,8 @@ import React, { useEffect, useSyncExternalStore } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { tasks } from 'reducers/tasks';
 import styled from 'styled-components';
-// import { HeaderDate } from './HeaderDate';
 import { StyledButton } from './StyledComponents/StyledButton'
+import { AlertMessage } from './AlertMessage'
 
 export const ToDoList = ({ id, complete }) => {
   const dispatch = useDispatch()
@@ -34,6 +34,7 @@ export const ToDoList = ({ id, complete }) => {
   const completedTasksCount = tasksList.filter((task) => task.complete)
   console.log('Completed tasks', completedTasksCount)
 
+  // Delete item from the list
   const onDeleteItemButton = (itemIndex) => {
     dispatch(
       tasks.actions.removeTask(itemIndex)
@@ -45,6 +46,7 @@ export const ToDoList = ({ id, complete }) => {
   return (
     <StyledToDoList>
       <h1>🦁 To do list 🦁</h1>
+      {tasksList < 1 && <AlertMessage />}
       {tasksList.map((item, index) => {
         return (
           <div className="toDoList" key={item.id}>
@@ -69,7 +71,6 @@ export const ToDoList = ({ id, complete }) => {
 }
 
 const StyledToDoList = styled.div`
-/* grid-area: 2 / 2 / 3 / 3; */
 
 h3 {
   text-transform: uppercase;
