@@ -10,8 +10,7 @@ export const AlertMessage = () => {
       <Player
         autoplay
         loop
-        src="https://assets4.lottiefiles.com/packages/lf20_7HVK9ugFmX.json"
-        style={{ height: '150px', width: '150px' }} />
+        src="https://assets4.lottiefiles.com/packages/lf20_7HVK9ugFmX.json" />
     </StyledAlertMessage>
 
   )
@@ -21,5 +20,9 @@ const StyledAlertMessage = styled.div`
 display:flex;
 align-items: center;
 flex-direction: column;
+
+h2 {
+  text-align:center;
+}
 
 `

@@ -81,6 +81,10 @@ h1 {
   text-align:center;
 }
 
+p {
+  text-align: center;
+  font-weight: bold;
+}
 .toDoList {
     display: flex;
     flex-direction: row;
@@ -95,13 +99,14 @@ h1 {
   @media screen and (min-width: 600px){
     width:60vw;
 
-
+  p {
+    font-size: 1.5em;
+  }
 }
 `
 const Input = styled.input`
 width:20px;
 background-color: #fefae0;
-
 
 `
 

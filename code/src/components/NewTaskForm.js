@@ -39,22 +39,32 @@ export const NewTaskForm = () => {
 export const formStyle = styled.div`
 text-align: center;
 
-/* grid-area: 1 / 2 / 2 / 3; */
 `
-
+// add button styling
 const Button = styled.button`
 background-color:#d4a373;
 margin:5px;
 margin-left:10px;
 border-radius: 5px;
+
+// bigger button on tablet and laptop
+@media screen and (min-width: 600px){
+  font-size: 1.5em;
+} 
 `
 
 const Input = styled.input`
 margin:5px;
 margin-left: 30px;
+margin-top: 20px;
 padding: 5px;
 border-radius: 5px;
 text-align:center;
 background-color: #fefae0;
+
+// bigger input on tablet and laptop
+@media screen and (min-width: 600px){
+  font-size: 1.5em;
+} 
 
 `
